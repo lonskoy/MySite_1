@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;    /*Базовый шрифт, от которого считаются все остальные шрифты в REM*/
+}
+
+/*----------------Блок подключния шрифтов-------------*/
+h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+
+
+
+/*----------------Блок переменых-------------*/
+:root {
+    --padding__main: 1rem 2rem 1rem 2rem ;        /*<-------Внутренние отступы для блока Main*/
+    --padding__asside: 1rem 1rem 1rem 1rem ;      /*<-------Внутренние отступы для блока Asside*/
+    --margin__bottom__links__asside: 1rem;        /*<-------Внешние отступы между кнопками блока Asside*/
+    --width__container__site: 80%;                /*<-------Ширина сайта*/
+    --padding-top__site: 3rem;                    /*<-------Верхний внутренний отступ сайта*/
+    --width__asside: 20%;                         /*<-------Ширина блока Asside*/ 
+    --min-heigth__header: 150px;                  /*<-------Минимальная высота Header*/ 
+}
+
+
+
+
+
+
+.background__site {                                      /*Фон-подложка сайта*/
+    display:flex;
+    width: 100vw;  
+    height: 100%;
+    min-height: 100vh;
+    background-image: url(../img/background__site.jpeg);/*Фоновый рисунок должен быть паттерном*/
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+.container__site {                                        /*Контейнер для Header, Container_body, Footer*/ 
+    display: flex;
+    flex-direction: column;
+    width: var(--width__container__site);
+    min-height: 100%;  /*По чему значение 100% схлопывает header и footer?*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: var(--padding-top__site);
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    min-height: var(--min-heigth__header);
+    height: 10%;
+    background-color: bisque;
+}
+
+.conteiner__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner__body__top {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+asside {
+    display: block;
+    width: var(--width__asside);
+    min-width: 200px;
+    max-width: 200px;
+    background-color: blueviolet;
+    padding: var(--padding__asside);
+    box-sizing: border-box;
+}
+
+.links__asside {
+    display: block;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.link__asside {
+    display: flex;
+    background-color: beige;
+    border: 2px black solid;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px 0 5px 0;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.articles__asside {
+    display: block; 
+}
+
+main {
+    display: flex;
+    width: 80%;
+    background-color: aquamarine;
+    padding: var(--padding__main);
+}
+
+.conteiner__body__bottom {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    max-height: 50px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    background-color: darkgray;
+}
+
+
+

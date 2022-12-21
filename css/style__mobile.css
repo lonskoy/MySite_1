@@ -1,0 +1,19 @@
+@media only screen and (min-width: 360px) and (max-width: 480px) {
+
+    html {
+        font-size: 10px;    /*Базовый шрифт, от которого считаются все остальные шрифты в REM*/
+    } 
+    
+    /*----------------Блок переменых-------------*/
+    :root {
+        --width__container__site: 95%;                /*<-------Ширина сайта*/
+        --min-heigth__header: 100px;                  /*<-------Минимальная высота Header*/ 
+        --padding-top__site: 0;                    /*<-------Верхний внутренний отступ сайта*/
+
+    }
+    
+    asside {
+        display: none;
+    }
+    
+}
